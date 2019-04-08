@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - "8"
+install:
+  - npm install shpjs --save
+  - npm install @turf/simplify
+scripts:
