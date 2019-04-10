@@ -1,8 +1,8 @@
 language: node_js
 node_js:
   - "8"
-# before-install:
-  # - curl -o- data.zip -X GET "https://data.gov.sg/api/action/resource_show?id=b0bc607c-11dd-4a5b-9890-5b9836b54900" -H "accept: application/json"
+before-install:
+  - curl -o- -X GET "https://data.gov.sg/api/action/resource_show?id=b0bc607c-11dd-4a5b-9890-5b9836b54900" -H "accept: application/json"
 install:
   - npm install jshint --save-dev
   - npm install shpjs --save
