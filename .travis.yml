@@ -4,4 +4,6 @@ node_js:
 install:
   - npm install shpjs --save
   - npm install @turf/simplify
-scripts:
+before-script:
+  - curl -o data.zip -X GET "https://data.gov.sg/api/action/resource_show?id=b0bc607c-11dd-4a5b-9890-5b9836b54900" -H "accept: application/json"
+script:
