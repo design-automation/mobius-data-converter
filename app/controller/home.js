@@ -15,29 +15,29 @@ class HomeController extends Controller {
       dataType: 'json',
     });
     // console.log()
-    if(result.status === 200) {
+    if (result.status === 200) {
       const fileURL = result.data.result.url;
       const PUBLIC_PATH = __dirname + '/../public/';
       // download file
       request
-      .get(fileURL)
-      .on('error', function(error) {
-        console.log(error);
-      }).pipe(fs.createWriteStream(PUBLIC_PATH + 'data.zip'))
-      .on('finish', function() {
-        const zip = new AdmZip(PUBLIC_PATH + 'data.zip');
-        zip.extractAllTo(PUBLIC_PATH, true);
+        .get(fileURL)
+        .on('error', function(error) {
+          console.log(error);
+        }).pipe(fs.createWriteStream(PUBLIC_PATH + 'data.zip'))
+        .on('finish', function() {
+          const zip = new AdmZip(PUBLIC_PATH + 'data.zip');
+          zip.extractAllTo(PUBLIC_PATH, true);
 
-        //convert to geojson
-        shp.toGeoJson(PUBLIC_PATH + 'SUBZONE_DWELLING_TYPE_2016.shp')
-        .then(function(geojson) {
-          var options = {tolerance: 0.01, highQuality: false};
-          var simplified = simplify(geojson, options);
-          console.log(JSON.stringify(geojson).length);
-          console.log(JSON.stringify(simplified).length);
-          fs.writeFile(PUBLIC_PATH + 'simplified.json', JSON.stringify(simplified), 'utf8', ()=>{});
+          // convert to geojson
+          shp.toGeoJson(PUBLIC_PATH + 'SUBZONE_DWELLING_TYPE_2016.shp')
+            .then(function(geojson) {
+              const options = { tolerance: 0.01, highQuality: false };
+              const simplified = simplify(geojson, options);
+              console.log(JSON.stringify(geojson).length);
+              console.log(JSON.stringify(simplified).length);
+              fs.writeFile(PUBLIC_PATH + 'simplified.json', JSON.stringify(simplified), 'utf8', () => {});
+            });
         });
-      });
 
       ctx.body = 'Success';
     }
