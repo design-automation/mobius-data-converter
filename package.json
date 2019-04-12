@@ -1,11 +1,51 @@
 {
-    "name": "travis",
-    "description": "Simple Travis-CI check for JSHint (Code Linting)",
-    "version": "0.0.1",
-    "devDependencies": {
-      "jshint": "^2.6.0"
-    },
-    "scripts": {
-      "test": "jshint hello.js"
-    }
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "@turf/simplify": "^5.1.5",
+    "adm-zip": "^0.4.13",
+    "egg": "^2.21.1",
+    "egg-scripts": "^2.11.0",
+    "gtran-shapefile": "^1.1.4",
+    "superagent": "^5.0.2"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.11.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-test",
+    "stop": "egg-scripts stop --title=egg-server-test",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
 }
