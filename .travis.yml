@@ -9,4 +9,4 @@ install:
   - npm install gtran-shapefile
   - npm install @turf/simplify
 script:
-  - npm run dev
+  - npm run ci
