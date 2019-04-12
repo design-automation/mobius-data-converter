@@ -2,11 +2,12 @@ language: node_js
 node_js:
   - "8"
 install:
-  - npm install egg
-  - npm install egg-scripts
-  - npm install adm-zip
-  - npm install superagent
-  - npm install gtran-shapefile
-  - npm install @turf/simplify
+  - npm i npminstall && npminstall
+  # - npm install egg
+  # - npm install egg-scripts
+  # - npm install adm-zip
+  # - npm install superagent
+  # - npm install gtran-shapefile
+  # - npm install @turf/simplify
 script:
   - npm run ci
