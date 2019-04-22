@@ -9,6 +9,7 @@
   "dependencies": {
     "@turf/simplify": "^5.1.5",
     "adm-zip": "^0.4.13",
+    "aws-sdk": "^2.441.0",
     "egg": "^2.21.1",
     "egg-scripts": "^2.11.0",
     "gtran-shapefile": "^1.1.4",

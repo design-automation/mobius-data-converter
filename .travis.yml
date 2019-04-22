@@ -1,13 +1,10 @@
+sudo: false
 language: node_js
 node_js:
-  - "8"
+  - '8'
 install:
   - npm i npminstall && npminstall
-  # - npm install egg
-  # - npm install egg-scripts
-  # - npm install adm-zip
-  # - npm install superagent
-  # - npm install gtran-shapefile
-  # - npm install @turf/simplify
 script:
   - npm run ci
+after_script:
+  - npminstall codecov && codecov
