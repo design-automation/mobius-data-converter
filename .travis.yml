@@ -1,10 +1,7 @@
-sudo: false
-language: node_js
-node_js:
-  - '8'
 install:
-  - npm i npminstall && npminstall
-script:
-  - npm run ci
-after_script:
-  - npminstall codecov && codecov
+- yarn add gtran-shapefile
+- yarn add @turf/simplify
+script: bash ./cli.sh
+env:
+  global:
+    secure: "x7RKPVRysOR5d7pUi87P5JX56Sa4yEtpDm3BqfbwdLA4HMIkNczkoVS27sjr6NZEltClhSJGa0oDdf9uvZnvZZLXD8Dh2nJjc8QyrqANWHF7BgfGbh0Xtj2+w2vTIz2zf+56ac++FTPr/ODCFivRUusBgPMynFH1TlhENNgxl5L9csEIF/iJl0h31fZN2sp/4Fj4FUsV6+mGoRdSVmJOqYl4St5hqZ5Xp5pWTOWd9GuyJu23HiPmGKenEb5VKaspcoSQmhpPoTb8yPP8C8XArg0XDMar571ZGQuEFkGe+w1oZ838ZeIeZoY7Ctel0apvgoD3ET8CpdPSH66nuNx/cp8+4djsEon3a8uAoYQIpOaNDsluQM5Nmm3bF9+7kp60X6Q5EpXrYcUZf2GVuI50Hz3JqgofGRadpH1E4LC7mBB2iOoZ+3slJpnAGglyKpPRiIbRGeeu992iX/nUkkdJ4aUmoYaCaCoyRizGsgQ9K550hZEjixKtPu3DFS7tNqrnainiLevYsCSzavFX0lORpiWN7tpsZcw9J1DzZQLWS2sxXr8S4qE/B1InZHLtLrewEO8Z4iKDKcNw9ObpFMXi8lOY0fg0+7+pX3UKo0ORMt6ZcQVu0tRAdRAcjAQShu10HMRF+VqZ8WygrR9zgPVruN5nA/bkSmkng87gHUuhbXs="
