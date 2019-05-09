@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@turf/simplify": "^5.1.5",
-    "gtran-shapefile": "^1.1.4"
+    "gtran-shapefile": "^1.1.4",
+    "shpjs": "^3.4.3"
   }
 }
