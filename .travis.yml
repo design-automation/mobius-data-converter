@@ -1,5 +1,5 @@
 install:
-- yarn add gtran-shapefile
+- yarn add shpjs
 - yarn add @turf/simplify
 script: bash ./cli.sh
 env:
