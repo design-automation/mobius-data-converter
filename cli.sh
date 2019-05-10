@@ -5,8 +5,8 @@ code=${response[-1]} # get last element (last line)
 body=${response[@]::${#response[@]}-1} # get all elements except last
 body=$(echo $body)
 shp_url=$(echo $body | grep -Eo 'https://geo.data.gov.sg[^ >]+'|tr -d '",')
-curl $shp_url -o 'SUBZONE_DWELLING_TYPE_2016.zip'
-# unzip shp.zip
+curl $shp_url -o 'shp.zip'
+unzip shp.zip
 node script.js
 git checkout master
 git remote set-url origin https://${TOKEN}@github.com/design-automation/mobius-data-converter.git
