@@ -2,6 +2,9 @@ install:
 - yarn add gtran-shapefile
 - yarn add @turf/simplify
 script: bash ./cli.sh
+branches:
+  only:
+  - master
 env:
   global:
     secure: "fv9nv0oy/QOl790WiWaDc+O3yQejxlSJMKcIzYYu8FnoDMtj95PpZwn6bS8K8ZrLDPv9W6QIE0dZDJ9gQ3B7+AejlH4MGyZKIdZOnFpyOf5/40qSZTWavWIF6eqzyOEPhmrQLNnBDvAeDDeyRrgw6VnAPNB43HDyRa8ppPeHz/ZSbh2EiaLK5zXrr9DCZT2ixhj7rHAHs2c8JGI6+RopclS6Mrw8Rcu4rOi+CXFzwXlEav63RAH5zinR8w9AuNl5RmpoFvkQnlY0gxb/FHXhdjGY8cX96kAjDuiHNeFd9ESd6Wj606sz8Kyja0uK5lIy3Tb04uAPkozb6nuLlEhUwFoIgyvbnklwnhFl4zXUExaGRWvYWVMx3nys8l2YmvOrz2FAqkZbcwtgNDzDIkCLNWHcQ7iCcgeKNyQr6x+LDBBHcz5BncWsHRvbG1YoSMHAvsAhAemTPsTBPlloQHSew9i4QaC5CbOBVGLAkfjFghXtewt15bM6/+2ApQiHINNe4nAstzK2yVL3A+T89G0R+deSA/0kbWhtQOXXzcm3rA+1tHtMTlrMpeItIrjg+Fz3jootysAsCN7ZHnuRrsTWQZEC8PXN4DwGf5wdqT6e+eFL9U3bLJqgNal2OVpBoyzdUbBiwr1vs9i5qlnk5VBdzlG47OzAGeoTXs7DfBDJMAI="
