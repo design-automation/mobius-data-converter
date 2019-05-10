@@ -11,5 +11,5 @@ node script.js
 git checkout master
 git remote set-url origin https://${TOKEN}@github.com/design-automation/mobius-data-converter.git
 git add simplified.json
-git commit -m "Upload Simplified Data"
+git commit -m "Upload Simplified Data..."
 git push
